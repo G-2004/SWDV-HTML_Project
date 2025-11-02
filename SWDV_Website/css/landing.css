@@ -1,0 +1,71 @@
+.gameimg img{
+      border-radius: 7px;
+}
+
+.singlegame{
+      display: grid;
+      grid-template-columns: 220px;/* There is an issue where if it is at the tippy top of the screen and you hover over it anything below is pushed down*/
+      grid-template-rows: 220px;
+      place-items: center;
+      justify-content: center;
+}
+.gamegrid{ /* holds multiple games in contained area */
+      display: grid;
+      grid-template-columns: 220px 220px 220px;
+      grid-template-rows: auto 220px auto auto;
+      text-align: center;
+      justify-content: center;
+      place-items: center;
+}
+
+      #gridtop{ /* for group title section */
+            grid-column: 1/4;
+            grid-row: 1/2;
+      }
+      #gridbottom{/* for descriptions */
+            grid-row: 4/5;
+            grid-column: 1/4;
+      }
+
+.titlebar{ /* creates a blue bar for the top of the page*/
+      background-color: #5caebd;
+      padding: 0%;
+      margin:0%;
+      border:0%;
+      width: 100%;
+}
+
+body {
+      margin: 0; /* this prevents white border around whole page*/
+      padding: 0;
+      border:0;
+      background: linear-gradient(#a0e7ec 60%, #72b6bb)
+}
+.centered{ /* centers everything */
+      text-align: center;
+      justify-content: center;
+}
+
+.gameimg img:hover {/* helps user identify images as links*/
+      height: 220px;
+      width: 220px;
+      opacity: 60%;
+      
+}
+
+#devdesctop{
+      font-size: 16pt;
+}
+
+.devdesc{
+      font-size: 8pt;
+}
+
+* {
+   font-family: "OpenDyslexic", "Arial";
+}
+
+@font-face {
+  font-family: OpenDyslexic; /* A font friendly to dyslexic folk and that has a fun bubbly vibe tyo match the site */
+  src: url("/fonts/open_dyslexic/OpenDyslexic-Regular.otf");
+}
