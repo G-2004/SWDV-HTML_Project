@@ -1,18 +1,29 @@
-.gameimg img{
-      border-radius: 7px;
+h3{
+      font-size: 24pt;
 }
-
+h2{
+      font-size: 20pt;
+}
+h1{
+      font-size: 16pt;
+}
+.gameimg img{
+      border-radius: 20px;
+      border: solid;
+      border-width: 12px;
+      border-color: rgb(255, 255, 255);
+}
 .singlegame{
       display: grid;
-      grid-template-columns: 220px;/* There is an issue where if it is at the tippy top of the screen and you hover over it anything below is pushed down*/
-      grid-template-rows: 220px;
+      grid-template-columns: 1fr;/* There is an issue where if it is at the tippy top of the screen and you hover over it anything below is pushed down*/
+      grid-template-rows: 420px;
       place-items: center;
       justify-content: center;
 }
 .gamegrid{ /* holds multiple games in contained area */
       display: grid;
-      grid-template-columns: 220px 220px 220px;
-      grid-template-rows: auto 220px auto auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto 420px auto auto;
       text-align: center;
       justify-content: center;
       place-items: center;
@@ -30,8 +41,8 @@
 .titlebar{ /* creates a blue bar for the top of the page*/
       background-color: #5caebd;
       padding: 0%;
-      margin:0%;
-      border:0%;
+      margin: 0%;
+      border: 0%;
       width: 100%;
 }
 
@@ -39,7 +50,7 @@ body {
       margin: 0; /* this prevents white border around whole page*/
       padding: 0;
       border:0;
-      background: linear-gradient(#a0e7ec 60%, #72b6bb)
+      background: linear-gradient(#a0e7ec 60%, #72b6bb);
 }
 .centered{ /* centers everything */
       text-align: center;
@@ -47,25 +58,90 @@ body {
 }
 
 .gameimg img:hover {/* helps user identify images as links*/
-      height: 220px;
-      width: 220px;
+      height: 420px;
+      width: 420px;
       opacity: 60%;
       
 }
 
 #devdesctop{
-      font-size: 16pt;
+      font-size: 24pt;
+      text-decoration: underline;
+      grid-column: 1/3;
+      grid-row: 1/3;
 }
 
-.devdesc{
-      font-size: 8pt;
+.devdesc{ /* this section creates a grid for contact info/credits to abide by at the bottom of the page. */
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      text-align: center;
+      justify-content: center;
+      place-items: center;
+      margin-top: 80px;
+}
+#Gdesc{ /* this section gives me a custom background to show a tiny bit of my personality to a curious user */
+      background: linear-gradient(#7102d8 60%, #1f0264 );
+      border-style: solid;
+      border-image: linear-gradient(#ebc355, #aa841b 60% ) 1;
+      width: 100%;
+      color: #ebc355;
+      height:500px;
+}
+#ScaledDesc{ /* this section gives me a custom background to show a tiny bit of his personality to a curious user */
+      background: linear-gradient(#d86902 60%, #640202 );
+      border-style: solid;
+      border-image: linear-gradient(#ebc355, #aa841b 60% ) 1;
+      width: 100%;
+      color: #ebc355;
+      height:500px;
+}
+.devdesc a:link{ /* this and the following 2 color links within credits/contact */
+      color: #61f3c2;
+}
+.devdesc a:visited{
+      color: #29af83;
+}
+.devdesc a:hover{
+      color: #239e75;
+}
+      
+.backgroundGame{ /* I'd like to display a screenshot from the game hovered behind the game at a low opacity */
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      justify-content: center;
+      place-items: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 50px;
+}
+
+#error404 {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #236672;
+}
+
+#error404 h3 {
+      font-size: 80pt;
+      margin: 0;
+}
+
+#error404 a {
+      font-size: 30pt;
+      margin: 0;
 }
 
 * {
-   font-family: "OpenDyslexic", "Arial";
+      font-family: "OpenDyslexic", "Arial";
 }
 
 @font-face {
-  font-family: OpenDyslexic; /* A font friendly to dyslexic folk and that has a fun bubbly vibe tyo match the site */
-  src: url("/fonts/open_dyslexic/OpenDyslexic-Regular.otf");
+      font-family: OpenDyslexic; /* A font friendly to dyslexic folk and that has a fun bubbly vibe to match the site */
+      src: url("/fonts/open_dyslexic/OpenDyslexic-Regular.otf");
 }
