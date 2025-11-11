@@ -81,22 +81,32 @@ body {
       margin-top: 80px;
 }
 #Gdesc{ /* this section gives me a custom background to show a tiny bit of my personality to a curious user */
-      background: linear-gradient(#7102d8 60%, #1f0264 );
+      /*background: linear-gradient(#7102d8 60%, #1f0264 );*/
+      background-color: #5caebd;
       border-style: solid;
-      border-image: linear-gradient(#ebc355, #aa841b 60% ) 1;
+      /*border-image: linear-gradient(#ebc355, #aa841b 60% ) 1;*/
       width: 100%;
-      color: #ebc355;
+      /*color: #ebc355;*/
+      border-color: #ffffff;
+      color: #ffffff;
       height:500px;
+      border-width: 12px;
+      border-radius: 20px;
 }
 #ScaledDesc{ /* this section gives me a custom background to show a tiny bit of his personality to a curious user */
-      background: linear-gradient(#d86902 60%, #640202 );
+      /*background: linear-gradient(#d86902 60%, #640202 );*/
+      background-color: #5caebd;
       border-style: solid;
-      border-image: linear-gradient(#ebc355, #aa841b 60% ) 1;
+      /*border-image: linear-gradient(#ebc355, #aa841b 60% ) 1;*/
       width: 100%;
-      color: #ebc355;
+      /*color: #ebc355;*/
+      border-color: #ffffff;
+      color: #ffffff;
       height:500px;
+      border-width: 12px;
+      border-radius: 20px;
 }
-.devdesc a:link{ /* this and the following 2 color links within credits/contact */
+/*.devdesc a:link{
       color: #61f3c2;
 }
 .devdesc a:visited{
@@ -104,6 +114,15 @@ body {
 }
 .devdesc a:hover{
       color: #239e75;
+}*/
+.devdesc a:link{ /* this and the following 2 color links within credits/contact */
+      color: #f3a6e6;
+}
+.devdesc a:visited{
+      color: #db76d3;
+}
+.devdesc a:hover{
+      color: #ac1cb1;
 }
       
 .backgroundGame{ /* I'd like to display a screenshot from the game hovered behind the game at a low opacity */
