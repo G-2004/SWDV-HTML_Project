@@ -1,3 +1,4 @@
+/*CSS for home page and 404 page*/
 h3{
       font-size: 24pt;
 }
@@ -12,6 +13,7 @@ h1{
       border: solid;
       border-width: 12px;
       border-color: rgb(255, 255, 255);
+      image-rendering: pixelated;
 }
 .singlegame{
       display: grid;
@@ -39,11 +41,19 @@ h1{
       }
 
 .titlebar{ /* creates a blue bar for the top of the page*/
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+      grid-template-rows: 100px;
       background-color: #5caebd;
       padding: 0%;
       margin: 0%;
       border: 0%;
       width: 100%;
+
+      place-items: center;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
 }
 
 body {
@@ -51,6 +61,9 @@ body {
       padding: 0;
       border:0;
       background: linear-gradient(#a0e7ec 60%, #72b6bb);
+      display: inline-block;
+      height: 100%;
+      width: 100%;
 }
 .centered{ /* centers everything */
       text-align: center;
@@ -89,9 +102,10 @@ body {
       /*color: #ebc355;*/
       border-color: #ffffff;
       color: #ffffff;
-      height:500px;
+      height:600px;
       border-width: 12px;
       border-radius: 20px;
+      box-sizing: border-box;
 }
 #ScaledDesc{ /* this section gives me a custom background to show a tiny bit of his personality to a curious user */
       /*background: linear-gradient(#d86902 60%, #640202 );*/
@@ -102,9 +116,10 @@ body {
       /*color: #ebc355;*/
       border-color: #ffffff;
       color: #ffffff;
-      height:500px;
+      height:600px;
       border-width: 12px;
       border-radius: 20px;
+      box-sizing: border-box;
 }
 /*.devdesc a:link{
       color: #61f3c2;

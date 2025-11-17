@@ -1,0 +1,254 @@
+h3{
+      font-size: 24pt;
+}
+h2{
+      font-size: 20pt;
+}
+h1{
+      font-size: 16pt;
+}
+.containerMainEmpPage {
+      display: flex;
+      justify-content: center;
+      align-items: stretch; /* forces children to match height */
+      gap: 150px; /* optional spacing between items */
+      margin-top: 80px;
+}
+.containerMain {
+      place-items: center;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 2vw 32vw 32vw 32vw 2vw;
+      grid-template-rows: auto;
+      margin-top: 80px;
+}
+.containerMainScaledsInfo {
+      image-rendering: optimizeQuality;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      background-color: #ff9100;
+      border-radius: 80px;
+      border-color: #ffffff;
+      border-width: 18px;
+      border-style: solid;
+      padding: 12px 40px;
+      box-sizing: border-box;
+      place-items: center;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto;
+      margin-top: 80px;
+
+      max-width: 100%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+}
+.containerMainScaledsInfo > *:not(img):not(a:has(img)) {
+      background-color: #f8ab6d;
+      border-radius: 80px;
+      border-color: #ffffff;
+      border-width: 10px;
+      border-style: solid;
+      padding: 12px 40px;
+      box-sizing: border-box;
+}
+.containerMainGsInfo {
+      image-rendering: optimizeQuality;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      background-color: #9b9beb;
+      border-radius: 80px;
+      border-color: #ffffff;
+      border-width: 18px;
+      border-style: solid;
+      padding: 12px 40px;
+      box-sizing: border-box;
+      place-items: center;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto;
+      margin-top: 80px;
+
+      max-width: 100%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+}
+.containerMainGsInfo > *:not(img):not(a:has(img)) {
+      background-color: #D3D3FF;
+      border-radius: 80px;
+      border-color: #ffffff;
+      border-width: 10px;
+      border-style: solid;
+      padding: 12px 40px;
+      box-sizing: border-box;
+}
+.topSection{
+      grid-column: 3/5;
+      grid-row: 1/2;
+      place-items: center;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+}
+
+.wrapMe {
+      max-width: 100%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+}
+#item1{
+      border-radius: 20px;
+      border-color: #ffffff;
+      border-width: 10px;
+      border-style: solid;
+      box-sizing: border-box;
+      transform: rotate(1.8deg);
+}
+#item2{
+      transform: rotate(-0.6deg);
+}
+#item3{
+      transform: rotate(0.6deg);
+}
+#item4{
+      transform: rotate(-0.5deg);
+}
+#item5 {
+      transform: rotate(0.5deg);
+}
+#item6 {
+      transform: rotate(-0.5deg);
+}
+#item7 {
+      transform: rotate(0.6deg);
+}
+#item8 {
+      transform: rotate(-0.8deg);
+}
+#item9 {
+      transform: rotate(0.3deg);
+}
+#item10 {
+      transform: rotate(-0.2deg);
+}
+
+.containerLeft {
+      display: grid;
+      grid-template-columns: 2vw 24vw 32vw 32vw 10vw;
+      grid-template-rows: 420px;
+      margin-top: 80px;
+}
+.conLeftImg{
+      grid-column: 2/3;
+      grid-row: 1/2;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 20px;
+      border: solid;
+      border-width: 12px;
+      border-color: rgb(255, 255, 255);
+      box-sizing: border-box;
+      justify-self: center;
+}
+.conLeftText{
+      grid-column: 3/5;
+      grid-row: 1/2;
+}
+
+.containerRight {
+      display: grid;
+      grid-template-columns: 10vw 32vw 32vw 24vw 2vw;
+      grid-template-rows: 420px;
+      margin-top: 80px;
+}
+.conRightText{
+      grid-column: 2/4;
+      grid-row: 1/2;
+      
+}
+.conRightImg{
+      grid-column: 4/5;
+      grid-row: 1/2;
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      border-radius: 20px;
+      border: solid;
+      border-width: 12px;
+      border-color: rgb(255, 255, 255);
+      box-sizing: border-box;
+      justify-self: center;
+}
+
+.titlebar{ /* creates a blue bar for the top of the page*/
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+      grid-template-rows: 100px;
+      background-color: #5caebd;
+      padding: 0%;
+      margin: 0%;
+      border: 0%;
+      width: 100%;
+
+      place-items: center;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+      margin: 0; /* this prevents white border around whole page*/
+      padding: 0;
+      border:0;
+      background: linear-gradient(#a0e7ec 60%, #72b6bb);
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-attachment: fixed; /*How can I get the background to just cover everything without being fixed like this?*/
+}
+p {
+      display: inline-block;
+      font-size: 12pt;
+}
+.centered{ /* centers everything */
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+}
+
+#contactMe{
+      margin: 20px;
+      background: #22686d;
+      border-radius: 80px;
+      padding: 12px 40px;
+      color: azure;
+      
+}
+#contactMeDiv a:visited{
+      color: rgb(39, 173, 35);
+}
+#contactMeDiv a:hover{
+      color: aquamarine;
+}
+
+* {
+      font-family: "OpenDyslexic", "Arial";
+}
+
+@font-face {
+      font-family: OpenDyslexic; /* A font friendly to dyslexic folk and that has a fun bubbly vibe to match the site */
+      src: url("/fonts/open_dyslexic/OpenDyslexic-Regular.otf");
+}
