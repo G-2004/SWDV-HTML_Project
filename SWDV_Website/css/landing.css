@@ -8,6 +8,47 @@ h2{
 h1{
       font-size: 16pt;
 }
+
+/**/
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-title {
+    margin: 0;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #a0e7ec;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border: 2px solid #5caebd;
+    border-radius: 6px;
+    width: 120px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background: #90e1e7;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/**/
+
 .gameimg img{
       border-radius: 20px;
       border: solid;
@@ -42,7 +83,7 @@ h1{
 
 .titlebar{ /* creates a blue bar for the top of the page*/
       display: grid;
-      grid-template-columns: auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto auto;
       grid-template-rows: 100px;
       background-color: #5caebd;
       padding: 0%;
@@ -59,11 +100,12 @@ h1{
 body {
       margin: 0; /* this prevents white border around whole page*/
       padding: 0;
+      padding-bottom: 0;
       border:0;
-      background: linear-gradient(#a0e7ec 60%, #72b6bb);
+      /*
       display: inline-block;
       height: 100%;
-      width: 100%;
+      width: 100%;*/
 }
 .centered{ /* centers everything */
       text-align: center;
@@ -170,7 +212,10 @@ body {
       font-size: 30pt;
       margin: 0;
 }
-
+footer{
+      position: fixed;
+      width: 100%;
+}
 * {
       font-family: "OpenDyslexic", "Arial";
 }
@@ -178,4 +223,8 @@ body {
 @font-face {
       font-family: OpenDyslexic; /* A font friendly to dyslexic folk and that has a fun bubbly vibe to match the site */
       src: url("/fonts/open_dyslexic/OpenDyslexic-Regular.otf");
+}
+
+html {
+      background: linear-gradient(#a0e7ec 60%, #72b6bb);
 }

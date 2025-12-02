@@ -1,5 +1,5 @@
-Double click the index.html file to open the site
-
+open the folder in vs code. try to run it from there if you can.
+https://github.com/G-2004/SWDV-HTML_Project
 #######################################################################################################
 PROJECT 2
 10/25/2025
