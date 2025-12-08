@@ -1,0 +1,156 @@
+/*CSS for home page and 404 page*/
+h3{
+      font-size: 24pt;
+}
+h2{
+      font-size: 20pt;
+}
+h1{
+      font-size: 16pt;
+}
+
+/**/
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-title {
+    margin: 0;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #a0e7ec;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border: 2px solid #5caebd;
+    border-radius: 6px;
+    width: 120px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background: #90e1e7;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/**/
+
+.titlebar{ /* creates a blue bar for the top of the page*/
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto auto;
+      grid-template-rows: 100px;
+      background-color: #5caebd;
+      padding: 0%;
+      margin: 0%;
+      border: 0%;
+      width: 100%;
+
+      place-items: center;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#a0e7ec 60%, #72b6bb);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh; /* ensures gradient covers full screen */
+}
+.centered{ /* centers everything */
+      text-align: center;
+      justify-content: center;
+}
+
+* {
+      font-family: "OpenDyslexic", "Arial";
+}
+
+@font-face {
+      font-family: OpenDyslexic; /* A font friendly to dyslexic folk and that has a fun bubbly vibe to match the site */
+      src: url("/fonts/open_dyslexic/OpenDyslexic-Regular.otf");
+}
+
+html {
+      background: linear-gradient(#a0e7ec 60%, #72b6bb);
+}
+
+/*Unique*/
+.purchaseWrapper {
+    display: flex;
+    padding: 20px;
+    gap: 40px;
+}
+
+.items {
+    flex: 2;
+}
+
+.totalBox {
+    flex: 1;
+    background: #72b6bb;
+    padding: 20px;
+    padding-bottom: 75vh;
+    border-radius: 10px;
+    height: fit-content;
+
+    border-width: 6px;
+    border-style: solid;
+    border-color: #ffffff;
+}
+/**/
+
+.itemBox {
+    position: relative;
+    display: inline-block;
+}
+
+.itemBox img {
+    display: block;
+    border-radius: 5%;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #ffffff;
+}
+
+.itemBox input[type="checkbox"] {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Mostly from | https://stackoverflow.com/questions/29617200/how-to-make-checkboxes-rounded */
+.item {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 4px solid white;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.item:checked {
+    background-color: rgb(0, 183, 255);
+}

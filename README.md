@@ -13,3 +13,17 @@ Made contact section smaller font
 Changed game images and titles
 
 #######################################################################################################
+Project 4
+12/7/2025
+
+MUCH HAS FAILED TO BE NOTED
+
+created purchase(.html .css & . js)
+
+You are now able to click the shop button in the navBar to enter the purchase page.
+
+Once on purchases you can click on the games to get your total cost. There is no purchase button as it wouldn't do anything currently.
+
+FP:
+Display prices and Game Title above image.
+#######################################################################################################

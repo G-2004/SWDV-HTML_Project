@@ -10,8 +10,8 @@ h1{
 .containerMainEmpPage {
       display: flex;
       justify-content: center;
-      align-items: stretch; /* forces children to match height */
-      gap: 150px; /* optional spacing between items */
+      align-items: stretch;
+      gap: 150px;
       margin-top: 80px;
 }
 .containerMain {
