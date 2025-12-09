@@ -1,15 +1,65 @@
-/*CSS for home page and 404 page*/
+/*Shared CSS*/
+.titlebar{ /* creates a blue bar for the top of the page*/
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: 100px;
+    background-color: #5caebd;
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    place-items: center;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    border-width: 6px;
+    border-right: 0px;
+    border-left: 0px;
+    border-style: solid;
+    border-color: #ffffff;
+
+    box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.3);
+}
 h3{
-      font-size: 24pt;
+    font-size: 24pt;
 }
 h2{
-      font-size: 20pt;
+    font-size: 20pt;
 }
 h1{
-      font-size: 16pt;
+    font-size: 16pt;
+}
+body {
+    margin: 0; /* this prevents white border around whole page*/
+    padding: 0;
+    border:0;
+    background: linear-gradient(#a0e7ec 60%, #72b6bb);
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed; /*How can I get the background to just cover everything without being fixed like this?*/
+}
+.centered{ /* centers everything */
+    text-align: center;
+    justify-content: center;
 }
 
-/**/
+* {
+    font-family: "OpenDyslexic", "Comic Sans MS", "Arial";
+}
+
+@font-face {
+    font-family: OpenDyslexic; /* A font friendly to dyslexic folk and that has a fun bubbly vibe to match the site */
+    src: url("/fonts/open_dyslexic/OpenDyslexic-Regular.otf");
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/*Dropdown Menu*/
 .dropdown {
     position: relative;
     display: inline-block;
@@ -47,66 +97,39 @@ h1{
 .dropdown:hover .dropdown-menu {
     display: block;
 }
-/**/
-
-.titlebar{ /* creates a blue bar for the top of the page*/
-      display: grid;
-      grid-template-columns: auto auto auto auto auto auto auto;
-      grid-template-rows: 100px;
-      background-color: #5caebd;
-      padding: 0%;
-      margin: 0%;
-      border: 0%;
-      width: 100%;
-
-      place-items: center;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(#a0e7ec 60%, #72b6bb);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    min-height: 100vh; /* ensures gradient covers full screen */
-}
-.centered{ /* centers everything */
-      text-align: center;
-      justify-content: center;
-}
-
-* {
-      font-family: "OpenDyslexic", "Arial";
-}
-
-@font-face {
-      font-family: OpenDyslexic; /* A font friendly to dyslexic folk and that has a fun bubbly vibe to match the site */
-      src: url("/fonts/open_dyslexic/OpenDyslexic-Regular.otf");
-}
-
-html {
-      background: linear-gradient(#a0e7ec 60%, #72b6bb);
-}
 
 /*Unique*/
+.sectionTitle{
+    margin: 10px;
+    width: 10em;
+    border-width: 6px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #ffffff;
+    text-indent: 5px;
+    background-color: #5caebd;
+}
 .purchaseWrapper {
     display: flex;
+    
     padding: 20px;
     gap: 40px;
 }
 
 .items {
-    flex: 2;
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    height: 100px;
 }
 
 .totalBox {
     flex: 1;
     background: #72b6bb;
     padding: 20px;
-    padding-bottom: 75vh;
+    padding-bottom: 70vh;
     border-radius: 10px;
     height: fit-content;
 
@@ -114,19 +137,36 @@ html {
     border-style: solid;
     border-color: #ffffff;
 }
-/**/
+
 
 .itemBox {
     position: relative;
     display: inline-block;
-}
-
-.itemBox img {
-    display: block;
     border-radius: 5%;
     border-width: 6px;
     border-style: solid;
     border-color: #ffffff;
+    background-color: #5caebd;
+}
+
+.itemBoxDetails{
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.itemBoxDetails h1,
+.itemBoxDetails p{
+    margin-left: 10px;
+    display: inline;
+}
+
+.itemBox img {
+    display: block;
+    border-radius: 3%;
+    border-width: 6px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 .itemBox input[type="checkbox"] {
@@ -137,8 +177,7 @@ html {
     height: 20px;
 }
 
-/* Mostly from | https://stackoverflow.com/questions/29617200/how-to-make-checkboxes-rounded */
-.item {
+.item { /* Mostly from | https://stackoverflow.com/questions/29617200/how-to-make-checkboxes-rounded */
     width: 1.3em;
     height: 1.3em;
     background-color: white;
@@ -153,4 +192,22 @@ html {
 
 .item:checked {
     background-color: rgb(0, 183, 255);
+}
+
+#selectedItems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#selectedItems img {
+    width: 150px;
+    height: auto;
+    border-radius: 5%;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #ffffff;
+    background-color: #5caebd;
 }
