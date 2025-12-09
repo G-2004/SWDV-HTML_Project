@@ -1,15 +1,70 @@
-/*CSS for home page and 404 page*/
-h3{
-      font-size: 24pt;
-}
-h2{
-      font-size: 20pt;
-}
-h1{
-      font-size: 16pt;
+/*Shared CSS*/
+.titlebar{ /* creates a blue bar for the top of the page*/
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: 100px;
+    background-color: #5caebd;
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    place-items: center;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    border-width: 6px;
+    border-right: 0px;
+    border-left: 0px;
+    border-style: solid;
+    border-color: #ffffff;
+
+    box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
-/**/
+h3{
+    font-size: 24pt;
+}
+
+h2{
+    font-size: 20pt;
+}
+
+h1{
+    font-size: 16pt;
+}
+
+body {
+    margin: 0; /* this prevents white border around whole page*/
+    padding: 0;
+    border:0;
+    background: linear-gradient(#a0e7ec 60%, #72b6bb);
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed; /*How can I get the background to just cover everything without being fixed like this?*/
+}
+
+.centered{ /* centers everything */
+    text-align: center;
+    justify-content: center;
+}
+
+* {
+    font-family: "OpenDyslexic", "Comic Sans MS", "Arial";
+}
+
+@font-face {
+    font-family: OpenDyslexic; /* A font friendly to dyslexic folk and that has a fun bubbly vibe to match the site */
+    src: url("/fonts/open_dyslexic/OpenDyslexic-Regular.otf");
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/*Dropdown Menu*/
 .dropdown {
     position: relative;
     display: inline-block;
@@ -47,184 +102,115 @@ h1{
 .dropdown:hover .dropdown-menu {
     display: block;
 }
-/**/
 
+/*Game grid and images*/
 .gameimg img{
-      border-radius: 20px;
-      border: solid;
-      border-width: 12px;
-      border-color: rgb(255, 255, 255);
-      image-rendering: pixelated;
+    border-radius: 20px;
+    border: solid;
+    border-width: 12px;
+    border-color: rgb(255, 255, 255);
+    image-rendering: pixelated;
 }
+
 .singlegame{
-      display: grid;
-      grid-template-columns: 1fr;/* There is an issue where if it is at the tippy top of the screen and you hover over it anything below is pushed down*/
-      grid-template-rows: 420px;
-      place-items: center;
-      justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 420px;
+    place-items: center;
+    justify-content: center;
 }
+
 .gamegrid{ /* holds multiple games in contained area */
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto 420px auto auto;
-      text-align: center;
-      justify-content: center;
-      place-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 420px auto auto;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
 }
 
-      #gridtop{ /* for group title section */
-            grid-column: 1/4;
-            grid-row: 1/2;
-      }
-      #gridbottom{/* for descriptions */
-            grid-row: 4/5;
-            grid-column: 1/4;
-      }
-
-.titlebar{ /* creates a blue bar for the top of the page*/
-      display: grid;
-      grid-template-columns: auto auto auto auto auto auto auto;
-      grid-template-rows: 100px;
-      background-color: #5caebd;
-      padding: 0%;
-      margin: 0%;
-      border: 0%;
-      width: 100%;
-
-      place-items: center;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
+#gridtop{ /* for group title section */
+    grid-column: 1/4;
+    grid-row: 1/2;
 }
 
-body {
-      margin: 0; /* this prevents white border around whole page*/
-      padding: 0;
-      padding-bottom: 0;
-      border:0;
-      /*
-      display: inline-block;
-      height: 100%;
-      width: 100%;*/
-}
-.centered{ /* centers everything */
-      text-align: center;
-      justify-content: center;
-}
-
-.gameimg img:hover {/* helps user identify images as links*/
-      height: 420px;
-      width: 420px;
-      opacity: 60%;
-      
+#gridbottom{/* for descriptions */
+    grid-row: 4/5;
+    grid-column: 1/4;
 }
 
 #devdesctop{
-      font-size: 24pt;
-      text-decoration: underline;
-      grid-column: 1/3;
-      grid-row: 1/3;
+    font-size: 24pt;
+    text-decoration: underline;
+    grid-column: 1/3;
+    grid-row: 1/3;
 }
 
-.devdesc{ /* this section creates a grid for contact info/credits to abide by at the bottom of the page. */
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-      text-align: center;
-      justify-content: center;
-      place-items: center;
-      margin-top: 80px;
-}
-#Gdesc{ /* this section gives me a custom background to show a tiny bit of my personality to a curious user */
-      /*background: linear-gradient(#7102d8 60%, #1f0264 );*/
-      background-color: #5caebd;
-      border-style: solid;
-      /*border-image: linear-gradient(#ebc355, #aa841b 60% ) 1;*/
-      width: 100%;
-      /*color: #ebc355;*/
-      border-color: #ffffff;
-      color: #ffffff;
-      height:600px;
-      border-width: 12px;
-      border-radius: 20px;
-      box-sizing: border-box;
-}
-#ScaledDesc{ /* this section gives me a custom background to show a tiny bit of his personality to a curious user */
-      /*background: linear-gradient(#d86902 60%, #640202 );*/
-      background-color: #5caebd;
-      border-style: solid;
-      /*border-image: linear-gradient(#ebc355, #aa841b 60% ) 1;*/
-      width: 100%;
-      /*color: #ebc355;*/
-      border-color: #ffffff;
-      color: #ffffff;
-      height:600px;
-      border-width: 12px;
-      border-radius: 20px;
-      box-sizing: border-box;
-}
-/*.devdesc a:link{
-      color: #61f3c2;
-}
-.devdesc a:visited{
-      color: #29af83;
-}
-.devdesc a:hover{
-      color: #239e75;
-}*/
-.devdesc a:link{ /* this and the following 2 color links within credits/contact */
-      color: #f3a6e6;
-}
-.devdesc a:visited{
-      color: #db76d3;
-}
-.devdesc a:hover{
-      color: #ac1cb1;
-}
-      
-.backgroundGame{ /* I'd like to display a screenshot from the game hovered behind the game at a low opacity */
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr;
-      justify-content: center;
-      place-items: center;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 50px;
+.devdesc{ /* grid for contact info/credits */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    margin-top: 80px;
 }
 
+#Gdesc, #ScaledDesc{ /* custom backgrounds for personality/credits */
+    background-color: #5caebd;
+    border-style: solid;
+    width: 100%;
+    border-color: #ffffff;
+    color: #ffffff;
+    height: 600px;
+    border-width: 12px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.devdesc a:link{
+    color: #f3a6e6;
+}
+.devdesc a:visited{
+    color: #db76d3;
+}
+.devdesc a:hover{
+    color: #ac1cb1;
+}
+
+.backgroundGame{ /* display a screenshot behind hovered game */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    place-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+}
+
+/*404 page*/
 #error404 {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: #236672;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #236672;
 }
 
 #error404 h3 {
-      font-size: 80pt;
-      margin: 0;
+    font-size: 80pt;
+    margin: 0;
 }
 
 #error404 a {
-      font-size: 30pt;
-      margin: 0;
+    font-size: 30pt;
+    margin: 0;
 }
+
 footer{
-      position: fixed;
-      width: 100%;
-}
-* {
-      font-family: "OpenDyslexic", "Arial";
-}
-
-@font-face {
-      font-family: OpenDyslexic; /* A font friendly to dyslexic folk and that has a fun bubbly vibe to match the site */
-      src: url("/fonts/open_dyslexic/OpenDyslexic-Regular.otf");
-}
-
-html {
-      background: linear-gradient(#a0e7ec 60%, #72b6bb);
+    position: fixed;
+    width: 100%;
 }

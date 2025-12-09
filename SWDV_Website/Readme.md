@@ -54,3 +54,7 @@ Games on purchase page now have prices and titles listed below image.
 When selected "items" on purchase page are shown in totalBox.
 
 you can remove an item from totalBox by clicking on its image. (side note: For now you can not define a quantity of game)
+
+Added the form I was supposed to have a while ago. A successful submission will bring the user to the 404 page.
+
+added javascript for the submit button on the form. (border flashes if not all required fields filled)(background changes color if they are filled)
