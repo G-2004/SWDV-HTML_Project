@@ -49,6 +49,10 @@ h1{
 #gameLogo{
       margin-top: 20px;
       image-rendering: pixelated;
+      transition: filter 0.3s ease-in-out;
+}
+#gameLogo:hover{
+      filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
 }
 .containerMain {
       place-items: center;
@@ -191,10 +195,11 @@ p {
       background: #22686d;
       border-radius: 80px;
       padding: 12px 40px;
-      
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 #purchaseButtonDiv{
       color: azure;
+      
 }
 #purchaseButtonDiv a:visited{
       color: rgb(39, 173, 35);
@@ -205,10 +210,10 @@ p {
 }
 
 * {
-      font-family: "OpenDyslexic", "Arial";
+    font-family: "OpenDyslexic", "Comic Sans MS", "Arial";
 }
 
 @font-face {
-      font-family: OpenDyslexic; /* A font friendly to dyslexic folk and that has a fun bubbly vibe to match the site */
-      src: url("/fonts/open_dyslexic/OpenDyslexic-Regular.otf");
+    font-family: OpenDyslexic; /* A font friendly to dyslexic folk and that has a fun bubbly vibe to match the site */
+    src: url("/fonts/open_dyslexic/OpenDyslexic-Regular.otf");
 }

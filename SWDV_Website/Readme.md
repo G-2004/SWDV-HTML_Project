@@ -58,3 +58,7 @@ you can remove an item from totalBox by clicking on its image. (side note: For n
 Added the form I was supposed to have a while ago. A successful submission will bring the user to the 404 page.
 
 added javascript for the submit button on the form. (border flashes if not all required fields filled)(background changes color if they are filled)
+
+Filled in missing images and replaced all Lorem Ipsum text.
+
+Came up with company slogan.
